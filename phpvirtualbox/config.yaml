@@ -39,8 +39,8 @@ schema:
 ports:
   80/tcp: 8932
 webui: http://[HOST]:[PORT:80]/
-#ingress: true
-#ingress_stream: true
+ingress: true
+ingress_stream: true
 panel_icon: mdi:server
 panel_title: VirtualBox
 watchdog: http://[HOST]:[PORT:80]/
