@@ -1,6 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: phpVirtualBox
-version: "1.0.0"
+version: "dev"
 slug: phpvirtualbox
 description: >-
   Manage a running Virtualbox server from the Home Assistant UI
