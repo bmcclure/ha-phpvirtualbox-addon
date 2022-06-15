@@ -1,0 +1,33 @@
+configuration:
+  vbox_username:
+    name: Vbox Username
+    description: The username of the system user which runs VirtualBox
+  vbox_password:
+    name: Vbox Password
+    description: The password of the system user which runs VirtualBox
+  vboxwebsrv_protocol:
+    name: VBoxWebSrv Protocol
+    description: The protocol to connect to your running VBoxWebSrv at (http or https)
+  vboxwebsrv_host:
+    name: VBoxWebSrv Host
+    description: The hostname or IP address where VBoxWebSrv is running
+  vboxwebsrv_port:
+    name: VBoxWebSrv Port
+    description: The port that VBoxWebSrv is running on
+  language:
+    name: Language
+    description: The language code to use for phpVirtualBox
+  enable_vrde:
+    name: Enable VRDE
+    description: Enable VirtualBox Remote Desktop Extension support in phpVirtualbox
+  vrde_start_port:
+    name: VRDE Start Port
+    description: The first available VRDE port to connect to
+  vrde_end_port:
+    name: VRDE End Port
+    description: The last available VRDE port to connect to
+  vrde_address:
+    name: VRDE Address
+    description: The default VRDE address (e.g. 192.168.1.1) to connect to.
+network:
+  80/tcp: The phpVirtualbox web server port

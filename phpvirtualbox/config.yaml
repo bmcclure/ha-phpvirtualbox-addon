@@ -1,0 +1,47 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: phpVirtualBox
+version: "1.0.0"
+slug: phpvirtualbox
+description: >-
+  Manage a running Virtualbox server from the Home Assistant UI
+url: "https://github.com/bmcclure/ha-phpvirtualbox-addon/tree/main/phpvirtualbox"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+init: false
+map:
+  - share:rw
+options:
+  vbox_username: vbox
+  vbox_password: null
+  vboxwebsrv_protocol: http
+  vboxwebsrv_host: null
+  vboxwebsrv_port: 18083
+  language: en
+  enable_vrde: false
+  vrde_start_port: 9000
+  vrde_end_port: 9100
+  vrde_address: null
+schema:
+  vbox_username: str
+  vbox_password: password
+  vboxwebsrv_protocol: list(http|https)
+  vboxwebsrv_host: str
+  vboxwebsrv_port: port
+  language: str
+  enable_vrde: bool
+  vrde_start_port: port?
+  vrde_end_port: port?
+  vrde_address: str?
+ports:
+  80/tcp: 8932
+webui: http://[HOST]:[PORT:80]/
+#ingress: true
+#ingress_stream: true
+panel_icon: mdi:server
+panel_title: VirtualBox
+watchdog: http://[HOST]:[PORT:80]/
+#image: "ghcr.io/home-assistant/{arch}-addon-example"

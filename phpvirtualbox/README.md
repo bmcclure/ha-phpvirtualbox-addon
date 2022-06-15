@@ -1,6 +1,8 @@
 # Home Assistant Add-on: Example add-on
 
-_Example add-on to use as a blueprint for new add-ons._
+This add-on allows you to manage an already-running VirtualBox server which is running the vboxwebsrv service.
+
+It uses ingress in Home Assistant to proxy the phpVirtualBox interface directly into Home Assistant.
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
