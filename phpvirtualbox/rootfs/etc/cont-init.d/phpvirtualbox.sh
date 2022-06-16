@@ -59,5 +59,3 @@ if [[ "$enable_vrde" && "$vrde_address" ]]; then
     sed -i 's/#var $vrdeaddress/var $vrdeaddress/g' \
     /var/www/phpvirtualbox/config.php
 fi
-
-cat /var/www/phpvirtualbox/config.php
