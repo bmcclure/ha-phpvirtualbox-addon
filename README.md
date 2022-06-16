@@ -4,7 +4,7 @@
 
 This repository contains the following add-ons
 
-### [phpVirtualBox](./example)
+### [phpVirtualBox](./phpvirtualbox)
 
 ![Supports aarch64 Architecture][aarch64-shield]
 ![Supports amd64 Architecture][amd64-shield]
