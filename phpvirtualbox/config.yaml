@@ -37,7 +37,7 @@ schema:
   vrde_end_port: port?
   vrde_address: str?
 ports:
-  80/tcp: 8932
+  80/tcp: null
 webui: http://[HOST]:[PORT:80]/
 ingress: true
 ingress_stream: true
