@@ -1,4 +1,4 @@
-# Home Assistant Add-on: Example add-on
+# Home Assistant Add-on: phpVirtualBox
 
 This add-on allows you to manage an already-running VirtualBox server which is running the vboxwebsrv service.
 
