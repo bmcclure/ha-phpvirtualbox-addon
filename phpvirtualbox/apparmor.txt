@@ -1,6 +1,6 @@
 #include <tunables/global>
 
-profile example flags=(attach_disconnected,mediate_deleted) {
+profile phpvirtualbox flags=(attach_disconnected,mediate_deleted,complain) {
   #include <abstractions/base>
 
   # Capabilities
@@ -27,19 +27,21 @@ profile example flags=(attach_disconnected,mediate_deleted) {
   # Access to options.json and other files within your addon
   /data/** rw,
 
-  # Start new profile for service
-  /usr/bin/my_program cx -> my_program,
+  # Network access
+  network tcp,
+  network udp,
 
-  profile my_program flags=(attach_disconnected,mediate_deleted) {
+  # Start new profile for service
+  /usr/sbin/nginx cx -> nginx,
+
+  profile nginx flags=(attach_disconnected,mediate_deleted,complain) {
     #include <abstractions/base>
 
     # Receive signals from S6-Overlay
-    signal (receive) peer=*_example,
+    signal (receive) peer=*_phpvirtualbox,
 
     # Access to options.json and other files within your addon
     /data/** rw,
-    /var/lib/nginx rw,
-    /var/lib/nginx/** rw,
 
     # Access to mapped volumes specified in config.json
     /share/** rw,
@@ -55,5 +57,6 @@ profile example flags=(attach_disconnected,mediate_deleted) {
     /bin/echo ix,
     /etc/passwd r,
     /dev/tty rw,
+    /var/lib/nginx/{,**} rw,
   }
 }
